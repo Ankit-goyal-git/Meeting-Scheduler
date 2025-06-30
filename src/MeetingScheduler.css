@@ -1,0 +1,668 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+
+.dashboard-bg {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  padding: 1.5rem;
+}
+
+.dashboard-header {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-welcome {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.dashboard-date-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dashboard-nav-btn {
+  padding: 0.25rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #4b5563;
+}
+
+.dashboard-nav-btn:hover {
+  color: #1f2937;
+}
+
+.dashboard-nav-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.dashboard-date {
+  font-size: 1.125rem;
+}
+
+.dashboard-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-working-hours {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dashboard-time-input {
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  padding: 0.25rem;
+}
+
+.dashboard-logout-btn {
+  background-color: #ef4444;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+}
+
+.dashboard-logout-btn:hover {
+  background-color: #dc2626;
+}
+
+
+.dashboard-week-overview {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-week-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.dashboard-week-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.dashboard-week-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
+}
+
+.dashboard-week-day {
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 0.375rem;
+  background-color: #f3f4f6;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.dashboard-week-day:hover {
+  background-color: #e0e7ff;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08);
+}
+
+.dashboard-week-day-active {
+  background-color: #3b82f6;
+  color: white;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.15);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.dashboard-week-day-name {
+  font-weight: 600;
+}
+
+.dashboard-week-day-date {
+  margin: 0.25rem 0;
+}
+
+.dashboard-week-day-meetings {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-meeting-form,
+.dashboard-meetings-list {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.dashboard-section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.dashboard-form-field {
+  margin-bottom: 1rem;
+}
+
+.dashboard-form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.dashboard-form-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+}
+
+.dashboard-form-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.dashboard-form-time {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.dashboard-form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.dashboard-checkbox {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+}
+
+.dashboard-recurring-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.dashboard-recurring-day {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.dashboard-submit-btn {
+  width: 100%;
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.dashboard-submit-btn:hover {
+  background-color: #2563eb;
+}
+
+.dashboard-meetings {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.dashboard-meeting-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.dashboard-meeting-item:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-meeting-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.dashboard-meeting-name {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #1f2937;
+}
+
+.dashboard-meeting-time {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.dashboard-meeting-recurring {
+  font-size: 0.75rem;
+  color: #3b82f6;
+  display: inline-block;
+  padding: 0.125rem 0.375rem;
+  background-color: #eff6ff;
+  border-radius: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.dashboard-meeting-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-left: 1rem;
+  align-items: center;
+}
+
+.dashboard-edit-btn,
+.dashboard-delete-btn {
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.dashboard-edit-btn {
+  color: #3b82f6;
+  background-color: #eff6ff;
+  border-color: #dbeafe;
+}
+
+.dashboard-edit-btn:hover {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.dashboard-delete-btn {
+  color: #ef4444;
+  background-color: #fef2f2;
+  border-color: #fee2e2;
+}
+
+.dashboard-delete-btn:hover {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+
+.dashboard-time-analysis {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.dashboard-time-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.dashboard-time-schedule,
+.dashboard-time-chart {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-time-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.dashboard-time-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.dashboard-time-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  background-color: #f9fafb;
+  margin-bottom: 0.5rem;
+  transition: all 0.2s;
+}
+
+.dashboard-time-item-free {
+  background-color: #f0fdf4;
+  border: 1px solid #dcfce7;
+}
+
+.dashboard-time-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dashboard-time-dot-free {
+  background-color: #22c55e;
+}
+
+.dashboard-time-name {
+  font-weight: 500;
+  color: #1f2937;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-time-item-free .dashboard-time-name {
+  color: #166534;
+}
+
+.dashboard-time-range {
+  font-size: 0.875rem;
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.dashboard-time-item-free .dashboard-time-range {
+  color: #15803d;
+}
+
+.dashboard-chart-container {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.dashboard-time-chart canvas {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.login-bg {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.login-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 24rem;
+}
+
+.login-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-error {
+  background-color: #fee2e2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+}
+
+.login-field {
+  margin-bottom: 1rem;
+}
+
+.login-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  color: #1f2937;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.login-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.login-btn {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.login-btn:hover {
+  background-color: #2563eb;
+}
+
+.login-link {
+  color: #3b82f6;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.login-link:hover {
+  color: #2563eb;
+}
+
+.dashboard-meeting-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.dashboard-cancel-btn {
+  width: 100%;
+  background-color: #6b7280;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.dashboard-cancel-btn:hover {
+  background-color: #4b5563;
+}
+
+.dashboard-profile-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background 0.2s;
+}
+.dashboard-profile-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-time-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-bg, .login-bg {
+    padding: 0.5rem;
+  }
+  .dashboard-header, .dashboard-week-overview, .dashboard-content, .dashboard-time-analysis, .login-container {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+  }
+  .dashboard-section-title, .login-title {
+    font-size: 1.1rem;
+  }
+  .dashboard-form-input, .login-input, .dashboard-submit-btn, .dashboard-cancel-btn, .dashboard-profile-btn, .dashboard-logout-btn, .login-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .dashboard-meeting-item, .dashboard-time-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem;
+  }
+  .dashboard-week-grid, .dashboard-recurring-days {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+  .dashboard-week-day {
+    font-size: 0.95rem;
+    padding: 0.25rem;
+  }
+  .dashboard-time-list, .dashboard-meetings {
+    max-height: 200px;
+  }
+  .dashboard-header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.25rem;
+  }
+  .dashboard-header-left, .dashboard-header-right {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .dashboard-working-hours {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .dashboard-profile-btn, .dashboard-logout-btn {
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+  }
+  .btn-icon-svg {
+    margin-right: 0 !important;
+  }
+  .btn-text {
+    display: none;
+  }
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-icon-svg {
+  display: inline-flex;
+}
+@media (max-width: 600px) {
+  .btn-text {
+    display: none;
+  }
+  .btn-icon-svg {
+    margin-right: 0 !important;
+  }
+} 
