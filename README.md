@@ -40,13 +40,3 @@ Visit [http://localhost:5173](http://localhost:5173) in your browser.
 ## Deployment
 You can check it deployed on [https://meeting-scheduler-sooty.vercel.app/](https://meeting-scheduler-sooty.vercel.app/) 
 
-### Deploy to Vercel
-1. Push your code to GitHub.
-2. Go to [vercel.com](https://vercel.com/) and import your repository.
-3. Follow the prompts (Vercel auto-detects Vite/React projects).
-4. Click "Deploy" and get your live URL!
-
-
-## Screenshots
-_Add screenshots here to showcase the UI._
-
