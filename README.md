@@ -38,7 +38,7 @@ yarn dev
 Visit [http://localhost:5173](http://localhost:5173) in your browser.
 
 ## Deployment
-You can deploy this app for free using platforms like [Vercel](https://vercel.com/) or [Netlify](https://netlify.com/):
+You can check it deployed on [https://meeting-scheduler-sooty.vercel.app/](https://meeting-scheduler-sooty.vercel.app/) 
 
 ### Deploy to Vercel
 1. Push your code to GitHub.
